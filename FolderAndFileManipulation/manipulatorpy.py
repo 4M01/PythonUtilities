@@ -4,9 +4,9 @@ from os.path import isfile, join
 
 parent_dir = "C:/Amol/Learn Kubernetes in a Month of Lunches video edition/"
 
-# with open(parent_dir + "Details.txt") as file:
-#     lines = file.readlines()
-#     lines = [line.rstrip() for line in lines]
+with open(parent_dir + "Details.txt") as file:
+    lines = file.readlines()
+    lines = [line.rstrip() for line in lines]
 
 os.chdir(parent_dir)
 onlyfiles = sorted(filter(os.path.isfile, os.listdir('.')),
@@ -19,7 +19,7 @@ for line in lines:
         counter = counter + 1
         line = str(counter) + " " + line
         path = os.path.join(parent_dir, line)
-        # os.mkdir(path)
+        os.mkdir(path)
         print("Directory '% s' created" % line)
 
 counter = 0
